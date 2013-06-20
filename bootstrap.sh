@@ -3,7 +3,7 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "init" --exclude ".osx" --exclude ".brew" \
+		--exclude ".osx" --exclude ".brew" \
 		--exclude "README.md" --exclude "LICENSE-GPL.txt" \
 		--exclude "LICENSE-MIT.txt" -av --no-perms . ~
 }
